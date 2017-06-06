@@ -59,4 +59,12 @@ git merge --no-ff -m "merge with no-ff" <name>
 
 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
 
+
 用git log --graph命令可以看到分支合并图
+
+
+
+修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+
+当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
+>>>>>>> dev
