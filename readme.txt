@@ -22,3 +22,6 @@ git reset --hard HEAD~100
 
 git reflog //查看记录下的每一次命令
 git reset --hard 3628164//指定版本
+
+git checkout -- readme.txt//撤销工作区
+git reset HEAD readme.txt//撤销缓冲区
