@@ -14,6 +14,7 @@ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历�
 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
 
 git log //查看日志
+git log --graph --pretty=oneline --abbrev-commit
 //回退之前版本
 git reset --hard HEAD^
 git reset --hard HEAD^^
@@ -48,9 +49,12 @@ Git鼓励大量使用分支：
 切换分支：git checkout <name>
 
 创建+切换分支：git checkout -b <name>
-
+=====
 合并某分支到当前分支：git merge <name>
 
+合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+git merge --no-ff -m "merge with no-ff" <name>
+=====
 删除分支：git branch -d <name>
 
 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
