@@ -23,5 +23,10 @@ git reset --hard HEAD~100
 git reflog //查看记录下的每一次命令
 git reset --hard 3628164//指定版本
 
+##工作区和缓冲区
 git checkout -- readme.txt//撤销工作区
 git reset HEAD readme.txt//撤销缓冲区
+
+##删除文件
+git rm test.txt //本地删了，想删除版本库某个文件
+git checkout -- test.txt//本地误删了，想从版本库恢复某个文件
