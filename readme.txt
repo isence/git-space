@@ -30,3 +30,10 @@ git reset HEAD readme.txt//撤销缓冲区
 ##删除文件
 git rm test.txt //本地删了，想删除版本库某个文件
 git checkout -- test.txt//本地误删了，想从版本库恢复某个文件
+
+##远程仓库
+要关联一个远程库，使用命令 git remote add origin git@github.com:isence/git-space.git
+
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
